@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffdd2d;
+      }
+    </style>
+  </defs>
+  <g id="label">
+    <g id="checkbox_circle_activated">
+      <path class="cls-1" d="M20,40C8.97,40,0,31.03,0,20S8.97,0,20,0s20,8.97,20,20-8.97,20-20,20Z"/>
+      <path d="M20,10h0c5.52,0,10,4.48,10,10h0c0,5.52-4.48,10-10,10h0c-5.52,0-10-4.48-10-10h0c0-5.52,4.48-10,10-10Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.76 22.71">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f1f2f3;
+      }
+    </style>
+  </defs>
+  <g id="label">
+    <path id="checkbox_deactivated" class="cls-1" d="M29.34.42c-.56-.56-1.48-.56-2.04,0L9.1,18.62h0s-6.63-6.63-6.63-6.63c-.56-.56-1.48-.56-2.04,0-.56.56-.56,1.48,0,2.04l8.67,8.67,1.02-1.02h0s1.02-1.02,1.02-1.02L29.34,2.47c.56-.56.56-1.48,0-2.04Z"/>
+  </g>
+</svg>
