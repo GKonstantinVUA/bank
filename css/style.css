@@ -177,7 +177,7 @@ table {
   align-self: stretch;
   transition: all .3s ease 0s;
   flex: 0 0 .75rem;
-  background: url(../../../img/items_svg/button_select.svg) center/.625rem .5625rem no-repeat;
+  background: url(../img/items_svg/button_select.svg) center/.625rem .5625rem no-repeat;
   display: flex;
   justify-content: center;
   align-items: center
