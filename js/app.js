@@ -789,5 +789,33 @@
             }));
         }
     }), 0);
+    const buttonShowMore = document.querySelector(".cell-bank__function-more");
+    const linkMenu = document.querySelector(".cell-bank__link-menu");
+    const wrapDopBody = document.querySelector(".cell-bank__wrap-dop-body");
+    function addTransitionEffect(element) {
+        if (element) {
+            element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+            element.style.opacity = "0";
+            element.style.transform = "translateY(-5px)";
+        }
+    }
+    function showElementWithEffect(element) {
+        if (element) {
+            element.style.display = "flex";
+            requestAnimationFrame((() => {
+                element.style.opacity = "1";
+                element.style.transform = "translateY(-5px)";
+            }));
+        }
+    }
+    addTransitionEffect(linkMenu);
+    addTransitionEffect(wrapDopBody);
+    buttonShowMore.addEventListener("click", (() => {
+        showElementWithEffect(linkMenu);
+    }));
+    linkMenu.addEventListener("click", (event => {
+        event.preventDefault();
+        showElementWithEffect(wrapDopBody);
+    }));
     window["FLS"] = false;
 })();

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<title>Main Passive</title>
@@ -7,7 +7,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="description" content="Вкладчик.com">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250103145404">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250103222927">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,14 +22,80 @@
 		<div id="popup" aria-hidden="true" class="popup">
 			<div class="popup__wrapper">
 				<div class="popup__content">
-					<button data-close type="button" class="popup__close">
-						<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
-							<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" />
-						</svg>
-					</button>
+					<div class="popup__header-box">
+						<div class="popup__name-parametr">Настройте параметры</div>
+						<button data-close type="button" class="popup__close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<path d="M13.6667 13.6667L7.83333 7.83333M7.83333 7.83333L2 2M7.83333 7.83333L13.6667 2M7.83333 7.83333L2 13.6667" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
 					<div class="popup__text">
-						Popup content
+						<form class="form-popup" action="#" method="GET" enctype="multipart/form-data">
+							<div class="form-popup__body-option">
+
+								<div class="form-popup__items-cover">
+									<div class="form-popup__box-listfields">
+										<div class="form-popup__up-level-group-item">
+											<div class="form-popup__wrap-input">
+												<input type="text" class="form-popup__field-item" name="total-amount" placeholder="Введите сумму" required>
+											</div>
+											<select name="form[contribution]" data-class-modif="form-popup">
+												<option value="" selected>Срок вклада</option>
+												<option value="first-term">Любой</option>
+												<option value="second-term">1 месяц</option>
+											</select>
+											<select name="form[currency]" data-class-modif="form-popup">
+												<option value="" selected>Валюта</option>
+												<option value="сurrency-one">Любой</option>
+												<option value="сurrency-two">1 месяц</option>
+											</select>
+											<select name="form[bank]" data-class-modif="form-popup">
+												<option value="" selected>Банк</option>
+												<option value="bank-one">Сбербанк</option>
+												<option value="bank-two">Альфа-Банк</option>
+											</select>
+										</div>
+
+										<div class="form-popup__setfields-group">
+											<fieldset class="form-popup__group-checkboxs">
+												<legend class="form-popup__subcaption">Дополнительно</legend>
+												<div class="form-popup__box-fieldsset">
+													<div class="form-popup__item-checkbox">
+														<input class="form-popup__input-item" id="with-replenishment" name="replenishment" value="with-replenishment" type="checkbox">
+														<label class="form-popup__label-item" for="with-replenishment">С пополнением</label>
+													</div>
+													<div class="form-popup__item-checkbox">
+														<input class="form-popup__input-item" id="with-capitalization" name="capitalization" value="with-capitalization" type="checkbox">
+														<label class="form-popup__label-item" for="with-capitalization">С капитализацией</label>
+													</div>
+												</div>
+											</fieldset>
+											<fieldset class="form-popup__group-radiobuttons">
+												<legend class="form-popup__subcaption">Сортировать</legend>
+												<div class="form-popup__box-fieldsset">
+													<div class="form-popup__item-radiobutton">
+														<input class="form-popup__input-item-sort" id="at-rate" name="sorting-bet" value="at-rate" type="radio">
+														<label class="form-popup__label-item-sort" for="at-rate">По ставке</label>
+													</div>
+													<div class="form-popup__item-radiobutton">
+														<input class="form-popup__input-item-sort" id="income" name="sorting-bet" value="income" type="radio">
+														<label class="form-popup__label-item-sort" for="income">По доходу</label>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+
+									</div>
+
+									<div class="form-popup__management-buttons cntrl-btn">
+										<button type="button" class="cntrl-btn__delete">Очистить</button>
+										<button type="button" class="cntrl-btn__show">Показать 83</button>
+									</div>
+
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -129,7 +195,7 @@
 			</section>
 
 			<!-- TODO INVESTMENTS -->
-			<section class="investmrnts investmrnts--setup">
+			<div class="investmrnts investmrnts--setup">
 				<div class="investmrnts__content">
 					<div class="investmrnts__body">
 
@@ -191,7 +257,7 @@
 							<div id="body-sub-items" class="cell-bank__wrap-dop-body">
 
 								<!-- * row 1 -->
-								<dix class="cell-bank__sub-element row-dop">
+								<div class="cell-bank__sub-element row-dop">
 									<div class="row-dop__fill-box">
 										<div class="row-dop__area-indicators">
 											<div class="row-dop__title-box">
@@ -210,10 +276,10 @@
 											<a href="#" target="_blank" class="row-dop__btn-detail">Подробнее</a>
 										</div>
 									</div>
-								</dix>
+								</div>
 
 								<!-- * row 2 -->
-								<dix class="cell-bank__sub-element row-dop">
+								<div class="cell-bank__sub-element row-dop">
 									<div class="row-dop__fill-box">
 										<div class="row-dop__area-indicators">
 											<div class="row-dop__title-box">
@@ -232,7 +298,7 @@
 											<a href="#" target="_blank" class="row-dop__btn-detail">Подробнее</a>
 										</div>
 									</div>
-								</dix>
+								</div>
 							</div>
 						</article>
 
@@ -277,7 +343,8 @@
 						</article>
 
 					</div>
-			</section>
+				</div>
+			</div>
 
 
 			<!-- TODO TOP -->
@@ -388,7 +455,7 @@
 						</div>
 
 						<div class="body-info__data-info">
-							По вопросам рекламы, сотрудничества и другим вопросам <br> <a href="mailto: vkladline@bk.ru" target="_blank" class="body-info__email">vkladline@bk.ru</a>
+							По вопросам рекламы, сотрудничества и другим вопросам <br> <a href="mailto:vkladline@bk.ru" target="_blank" class="body-info__email">vkladline@bk.ru</a>
 						</div>
 					</div>
 
@@ -396,7 +463,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250103145404"></script>
+	<script src="js/app.min.js?_v=20250103222927"></script>
 </body>
 
 </html>
