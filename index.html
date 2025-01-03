@@ -5,9 +5,9 @@
 	<title>Main Passive</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<meta name="description" content="Author: Garshin K. V. Enter Text">
+	<meta name="description" content="Вкладчик.com">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250101025428">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250103145404">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +19,21 @@
 			<div class="header__container">
 			</div>
 		</header>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
+							<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" />
+						</svg>
+					</button>
+					<div class="popup__text">
+						Popup content
+					</div>
+				</div>
+			</div>
+		</div>
 		<main class="page page--setup">
 
 			<!-- TODO HERO -->
@@ -35,6 +50,236 @@
 				</div>
 			</section>
 
+			<!-- TODO NEWS  -->
+			<section class="news news--setup">
+				<div class="news__container">
+					<div class="news__body level-row">
+						<div class="level-row__currency">
+
+							<div class="level-row__actual-news">
+								<img src="img/items_svg/tass.svg" alt="tass" class="level-row__tass-pic" width="23" height="23">
+								<h1 class="level-row__title">Актуальные новости</h1>
+							</div>
+
+							<div class="level-row__indicators indicator">
+
+								<h2 class="indicator__subtitle">Курс ЦБ РФ:</h2>
+
+								<div class="exchange-rate">
+									<img src="img/items_svg/flagusa.svg" alt="flag USA" class="exchange-rate__flag" width="20" height="20">
+									<strong class="exchange-rate__country">usa</strong>
+									<span class="exchange-rate__value-minus">102.34</span>
+									<img src="img/items_svg/arrow_minus.svg" alt="Indicator" class="exchange-rate__pic" width="8" height="26">
+								</div>
+
+								<div class="exchange-rate">
+									<img src="img/items_svg/euro.svg" alt="flag EUR" class="exchange-rate__flag" width="20" height="20">
+									<strong class="exchange-rate__country">eur</strong>
+									<span class="exchange-rate__value-plus">106.54</span>
+									<img src="img/items_svg/arrow_plus.svg" alt="Indicator" class="exchange-rate__pic" width="8" height="26">
+								</div>
+							</div>
+						</div>
+
+						<div class="level-row__tass tass">
+							<ul class="tass__list">
+								<li class="tass__cell">
+									<span class="tass__time">17:08</span>
+									<div class="tass__desk">
+										<p>Орбан заявил, что Венгрия хочет сохранить связи с РФ
+											Венгерский премьер-министр отметил, что надеется и на развитие сотрудничества с США в области экономики</p>
+									</div>
+								</li>
+								<li class="tass__cell">
+									<span class="tass__time">17:08</span>
+									<div class="tass__desk">
+										<p>По ж/д части Крымского моста за пять лет проехали 18 млн пассажиров
+											По итогам 2024 года прогнозируется прирост пассажирских перевозок по сравнению с 2023 годом на 14%</p>
+									</div>
+								</li>
+								<li class="tass__cell">
+									<span class="tass__time">17:08</span>
+									<div class="tass__desk">
+										<p>Маск раскритиковал траты США на оборону Европы
+											Бизнесмен отметил, что подобные расходы не имеют смысла, учитывая "огромный дефицит бюджета и неприемлемый рост долга"</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- TODO FILTERS  -->
+				<div class="news__content">
+					<div class="news__area-bg">
+						<form class="deposits" action="#" method="GET" enctype="multipart/form-data">
+							<div class="deposits__inner-field">
+								<input type="text" class="deposits__input" name="amount" placeholder="Сумма вклада" required>
+							</div>
+							<select class="deposits__mouth" name="form[]" data-class-modif="form">
+								<option value="" selected>Срок вклада</option>
+								<option value="value-one">1 месяц</option>
+								<option value="value-two">2 месяца</option>
+							</select>
+							<button type="button" class="deposits__show-value">Показать 83</button>
+							<a href="#" class="deposits__filters" data-popup="#popup">Фильтры</a>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<!-- TODO INVESTMENTS -->
+			<section class="investmrnts investmrnts--setup">
+				<div class="investmrnts__content">
+					<div class="investmrnts__body">
+
+						<article class="investmrnts__cell-bank cell-bank">
+							<div class="cell-bank__inner-body">
+								<div class="cell-bank__area-indicators">
+
+									<div class="cell-bank__title-box">
+										<img src="img/items_svg/bank_sb.svg" alt="Сбербанк" class="cell-bank__label" width="38" height="38" loading="lazy">
+										<div class="cell-bank__wrap-item">
+											<h2 class="cell-bank__caption">Сбербанк <span class="cell-bank__note">СберВклад (в конце срока)</span></h2>
+										</div>
+									</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Cтавка</span>до 24.00%</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Срок</span>30 - 1095 дн.</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Ваш доход</span>1 231 832 ₽</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Сумма</span>от 100 000 ₽</div>
+								</div>
+								<div class="cell-bank__item-control">
+									<a href="#" target="_blank" class="cell-bank__btn-detail">Подробнее</a>
+
+								</div>
+							</div>
+						</article>
+
+						<article class="investmrnts__cell-bank cell-bank">
+							<div class="cell-bank__inner-body">
+								<div class="cell-bank__area-indicators">
+									<div class="cell-bank__title-box">
+										<img src="img/items_svg/bank_alfa.svg" alt="АльфаБанк" class="cell-bank__label" width="38" height="38" loading="lazy">
+										<div class="cell-bank__wrap-item">
+											<h2 class="cell-bank__caption">АльфаБанк <span class="cell-bank__note">АЛЬФА-ВКЛАД</span></h2>
+											<button id="item-control" type="button" class="cell-bank__function-more">Еще 3 вклада</button>
+										</div>
+									</div>
+									<div class="cell-bank__group-value">Cтавка
+										<span class="cell-bank__up-desk">до 24.00%</span>
+									</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Срок</span>30 - 1095 дн.</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Ваш доход</span>1 231 832 ₽</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Сумма</span>от 100 000 ₽</div>
+								</div>
+
+								<div class="cell-bank__item-control">
+									<a href="#" target="_blank" class="cell-bank__btn-detail">Подробнее</a>
+									<a href="#" id="item-show-more-list" class="cell-bank__link-menu">
+										<svg class="cell-bank__submenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+											<g>
+												<g>
+													<path d="M29,39H10c-5.51,0-10-4.49-10-10V10C0,4.49,4.49,0,10,0h19c5.51,0,10,4.49,10,10v19c0,5.51-4.49,10-10,10ZM10,1C5.04,1,1,5.04,1,10v19c0,4.96,4.04,9,9,9h19c4.96,0,9-4.04,9-9V10c0-4.96-4.04-9-9-9H10Z" />
+													<path d="M27.07,17.66l-6.36-6.36c-.39-.39-1.02-.39-1.41,0l-6.36,6.36c-.39.39-.39,1.02,0,1.41.39.39,1.02.39,1.41,0l4.66-4.66v13.59c0,.55.45,1,1,1s1-.45,1-1v-13.59l4.66,4.66c.39.39,1.02.39,1.41,0,.39-.39.39-1.02,0-1.41Z" />
+												</g>
+											</g>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div id="body-sub-items" class="cell-bank__wrap-dop-body">
+
+								<!-- * row 1 -->
+								<dix class="cell-bank__sub-element row-dop">
+									<div class="row-dop__fill-box">
+										<div class="row-dop__area-indicators">
+											<div class="row-dop__title-box">
+												<img src="img/items_svg/bank_alfa.svg" alt="АльфаБанк" class="row-dop__label" width="38" height="38" loading="lazy">
+												<div class="row-dop__wrap-item">
+													<h2 class="row-dop__caption">АльфаБанк <span class="row-dop__note">АЛЬФА-ВКЛАД</span></h2>
+												</div>
+											</div>
+											<div class="row-dop__group-value"><span class="row-dop__up-desk">Cтавка</span>до 22.0%</div>
+											<div class="row-dop__group-value"><span class="row-dop__up-desk">Срок</span>120 - 1080 дн.</div>
+											<div class="row-dop__group-value"><span class="row-dop__up-desk">Ваш доход</span>18 333 ₽</div>
+											<div class="row-dop__group-value"><span class="row-dop__up-desk">Сумма</span>от 10 000 ₽</div>
+										</div>
+
+										<div class="row-dop__item-control">
+											<a href="#" target="_blank" class="row-dop__btn-detail">Подробнее</a>
+										</div>
+									</div>
+								</dix>
+
+								<!-- * row 2 -->
+								<dix class="cell-bank__sub-element row-dop">
+									<div class="row-dop__fill-box">
+										<div class="row-dop__area-indicators">
+											<div class="row-dop__title-box">
+												<img src="img/items_svg/bank_alfa.svg" alt="АльфаБанк" class="row-dop__label" width="38" height="38" loading="lazy">
+												<div class="row-dop__wrap-item">
+													<h2 class="row-dop__caption">АльфаБанк <span class="row-dop__note">АЛЬФА-ВКЛАД</span></h2>
+												</div>
+											</div>
+											<div class="row-dop__group-value"><span class="row-dop__up-desk">Cтавка</span>до 22.0%</div>
+											<div class="row-dop__group-value"><span class="row-dop__up-desk">Срок</span>120 - 1080 дн.</div>
+											<div class="row-dop__group-value"><span class="row-dop__up-desk">Ваш доход</span>18 333 ₽</div>
+											<div class="row-dop__group-value"><span class="row-dop__up-desk">Сумма</span>от 10 000 ₽</div>
+										</div>
+
+										<div class="row-dop__item-control">
+											<a href="#" target="_blank" class="row-dop__btn-detail">Подробнее</a>
+										</div>
+									</div>
+								</dix>
+							</div>
+						</article>
+
+						<article class="investmrnts__cell-bank cell-bank">
+							<div class="cell-bank__inner-body">
+								<div class="cell-bank__area-indicators">
+									<div class="cell-bank__title-box">
+										<img src="img/items_svg/bank_mkb.svg" alt="Московский кредитный банк" class="cell-bank__label" width="38" height="38" loading="lazy">
+										<div class="cell-bank__wrap-item">
+											<h2 class="cell-bank__caption">Московский кредитный банк <span class="cell-bank__note">МКБ. Новогодний</span></h2>
+										</div>
+									</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Cтавка</span>до 24.00%</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Срок</span>30 - 1095 дн.</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Ваш доход</span>1 231 832 ₽</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Сумма</span>от 100 000 ₽</div>
+								</div>
+								<div class="cell-bank__item-control">
+									<a href="#" target="_blank" class="cell-bank__btn-detail">Подробнее</a>
+								</div>
+							</div>
+						</article>
+
+						<article class="investmrnts__cell-bank cell-bank">
+							<div class="cell-bank__inner-body">
+								<div class="cell-bank__area-indicators">
+									<div class="cell-bank__title-box">
+										<img src="img/items_svg/bank_gaz.svg" alt="Газпромбанк" class="cell-bank__label" width="38" height="38" loading="lazy">
+										<div class="cell-bank__wrap-item">
+											<h2 class="cell-bank__caption">Газпромбанк <span class="cell-bank__note">Накопительный счет</span></h2>
+										</div>
+									</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Cтавка</span>до 24.00%</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Срок</span>30 - 1095 дн.</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Ваш доход</span>1 231 832 ₽</div>
+									<div class="cell-bank__group-value"><span class="cell-bank__up-desk">Сумма</span>от 100 000 ₽</div>
+								</div>
+								<div class="cell-bank__item-control">
+									<a href="#" target="_blank" class="cell-bank__btn-detail">Подробнее</a>
+								</div>
+							</div>
+						</article>
+
+					</div>
+			</section>
+
+
 			<!-- TODO TOP -->
 			<section class="top-bank top-bank--setup">
 				<div class="top-bank__ind-container">
@@ -50,7 +295,6 @@
 			</section>
 
 			<!-- TODO RETING -->
-
 			<div class="reting reting--setup">
 				<div class="reting__ind-container">
 					<div class="reting__body table-data">
@@ -152,7 +396,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250101025428"></script>
+	<script src="js/app.min.js?_v=20250103145404"></script>
 </body>
 
 </html>
