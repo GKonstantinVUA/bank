@@ -7,7 +7,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="description" content="Вкладчик.com">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250103223950">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250104150928">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,19 +38,19 @@
 									<div class="form-popup__box-listfields">
 										<div class="form-popup__up-level-group-item">
 											<div class="form-popup__wrap-input">
-												<input type="text" class="form-popup__field-item" name="total-amount" placeholder="Введите сумму" required>
+												<input type="text" class="form-popup__field-item" name="total-amount" placeholder="Введите сумму" autocomplete="off" required>
 											</div>
 											<select name="form[contribution]" data-class-modif="form-popup">
 												<option value="" selected>Срок вклада</option>
 												<option value="first-term">Любой</option>
 												<option value="second-term">1 месяц</option>
 											</select>
-											<select name="form[currency]" data-class-modif="form-popup">
+											<select name="form[currency]" data-one-select data-class-modif="form-popup">
 												<option value="" selected>Валюта</option>
-												<option value="сurrency-one">Любой</option>
-												<option value="сurrency-two">1 месяц</option>
+												<option value="сurrency-one">Рубль</option>
+												<option value="сurrency-two">Юань</option>
 											</select>
-											<select name="form[bank]" data-class-modif="form-popup">
+											<select name="form[bank]" data-one-select data-class-modif="form-popup">
 												<option value="" selected>Банк</option>
 												<option value="bank-one">Сбербанк</option>
 												<option value="bank-two">Альфа-Банк</option>
@@ -463,7 +463,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250103223950"></script>
+	<script src="js/app.min.js?_v=20250104150928"></script>
 </body>
 
 </html>

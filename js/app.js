@@ -564,7 +564,17 @@
             const originalSelect = this.getSelectElement(selectItem).originalSelect;
             const selectOptions = this.getSelectElement(selectItem, this.selectClasses.classSelectOptions).selectElement;
             const selectOpenzIndex = originalSelect.dataset.zIndex ? originalSelect.dataset.zIndex : 3;
+            this.selectsСlose();
             this.setOptionsPosition(selectItem);
+            setTimeout((() => {
+                if (!selectOptions.classList.contains("_slide")) {
+                    selectItem.classList.toggle(this.selectClasses.classSelectOpen);
+                    _slideToggle(selectOptions, originalSelect.dataset.speed);
+                    if (selectItem.classList.contains(this.selectClasses.classSelectOpen)) selectItem.style.zIndex = selectOpenzIndex; else setTimeout((() => {
+                        selectItem.style.zIndex = "";
+                    }), originalSelect.dataset.speed);
+                }
+            }), 0);
             if (originalSelect.closest("[data-one-select]")) {
                 const selectOneGroup = originalSelect.closest("[data-one-select]");
                 this.selectsСlose(selectOneGroup);
@@ -816,6 +826,67 @@
     linkMenu.addEventListener("click", (event => {
         event.preventDefault();
         showElementWithEffect(wrapDopBody);
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        function formatCurrency(input) {
+            const numericValue = input.value.replace(/[^\d]/g, "");
+            if (numericValue === "") {
+                input.value = "";
+                return;
+            }
+            const formattedValue = new Intl.NumberFormat("ru-RU").format(numericValue);
+            input.value = `${formattedValue} ₽`;
+            setCursorToEnd(input);
+        }
+        function setCursorToEnd(input) {
+            const position = input.value.length - 2;
+            input.setSelectionRange(position, position);
+        }
+        function handleInput(event) {
+            const input = event.target;
+            input.value.replace(/[^\d]/g, "");
+            formatCurrency(input);
+            setCursorToEnd(input);
+        }
+        const inputs = document.querySelectorAll(".deposits__input, .form-popup__field-item");
+        inputs.forEach((input => {
+            input.addEventListener("input", handleInput);
+            input.addEventListener("focus", (() => {
+                input.value = input.value.replace(/[^\d]/g, "");
+            }));
+            input.addEventListener("blur", (() => {
+                formatCurrency(input);
+            }));
+        }));
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const clearButton = document.querySelector(".cntrl-btn__delete");
+        if (clearButton) clearButton.addEventListener("click", (() => {
+            const form = document.querySelector(".form-popup");
+            if (form) {
+                const textInputs = form.querySelectorAll('input[type="text"]');
+                textInputs.forEach((input => {
+                    input.value = "";
+                }));
+                const selects = form.querySelectorAll("select");
+                selects.forEach((select => {
+                    select.selectedIndex = 0;
+                    if (select.closest(".select")) {
+                        select.closest(".select");
+                        modules_flsModules.select.selectBuild(select);
+                    }
+                }));
+                const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach((checkbox => {
+                    checkbox.checked = false;
+                }));
+                const radios = form.querySelectorAll('input[type="radio"]');
+                radios.forEach((radio => {
+                    radio.checked = false;
+                }));
+                console.log("Форма очищена!");
+            }
+        }));
     }));
     window["FLS"] = false;
 })();
